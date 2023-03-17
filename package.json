@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+    "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^12.8.1",
     "typescript": "^5.0.2"
   }
