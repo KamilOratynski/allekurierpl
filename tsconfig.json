@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": "https://nowy.allekurier.pl/",
         "target": "es5",
         "lib": [
             "es5",

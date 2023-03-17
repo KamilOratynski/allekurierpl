@@ -2,6 +2,6 @@
 
 describe('homepage test', () => {
   it('visit allekurier page', () => {
-    cy.visit('https://nowy.allekurier.pl/');
+    cy.visit('/');
   })
 })
