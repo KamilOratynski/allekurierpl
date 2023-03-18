@@ -23,9 +23,12 @@ export default defineConfig({
     setupNodeEvents
   },
   env: {
-    hideXHRInCommandLog: true
+    hideXHRInCommandLog: true,
+    login: "testkurier2@gmail.com",
+    password: "kurier2test"
   },
   blockHosts: ["consent.cookiebot.com", "consentcdn.cookiebot.com"],
   viewportWidth: 1366,
-  viewportHeight: 768
+  viewportHeight: 768,
+  video: false
 });

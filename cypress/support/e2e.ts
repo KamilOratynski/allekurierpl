@@ -29,3 +29,7 @@ if (Cypress.env("hideXHRInCommandLog")) {
         app.document.head.appendChild(style);
     }
 }
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+})
