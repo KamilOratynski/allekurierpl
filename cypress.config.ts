@@ -9,6 +9,7 @@ export default defineConfig({
   },
   env: {
     hideXHRInCommandLog: true,
+    apiUrl: "https://api.allekurier.pl/",
     login: "testkurier2@gmail.com",
     password: "kurier2test"
   },
