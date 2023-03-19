@@ -19,7 +19,6 @@ async function setupNodeEvents(
 export default defineConfig({
   e2e: {
     baseUrl: "https://nowy.allekurier.pl/",
-    specPattern: "**/*.feature",
     setupNodeEvents
   },
   env: {
