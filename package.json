@@ -4,7 +4,7 @@
     "cy:firefox": "cypress run --browser firefox",
     "cy:chrome": "cypress run --browser chrome",
     "cy:edge": "cypress run --browser edge",
-    "cy:docker": "docker run --rm -v %cd%:/e2e -w /e2e cypress/included:12.8.1 --browser firefox --spec cypress/e2e/allekurierpl.feature"
+    "cy:docker": "docker run --rm -v %cd%:/e2e -w /e2e cypress/included:12.8.1 --browser firefox"
   },
   "devDependencies": {
     "cypress": "^12.8.1",

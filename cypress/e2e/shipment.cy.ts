@@ -12,7 +12,7 @@ describe('E2E tests - shipment', () => {
     it('Check if 6 offers have been found', () => {
         cy.visit('/');
 
-        cy.package(weight, lengthP, width, height, insurance, sendingCountry, pickupCountry);
+        cy.definePackage(weight, lengthP, width, height, insurance, sendingCountry, pickupCountry);
         cy.get('.button').contains('Wyceń przesyłkę').click();
 
         cy.contains('Sprawdź oferty firm kurierskich dla podanych parametrów przesyłki');
@@ -22,23 +22,29 @@ describe('E2E tests - shipment', () => {
     it('Check if courier companies contain all attributes', () => {
         cy.visit('/');
 
-        cy.package(weight, lengthP, width, height, insurance, sendingCountry, pickupCountry);
+        cy.definePackage(weight, lengthP, width, height, insurance, sendingCountry, pickupCountry);
         cy.get('.button').contains('Wyceń przesyłkę').click();
 
-        cy.get('#form-results > :nth-child(4)').contains('List przewozowy: Drukuje i nakleja nadawca');
-        cy.get('#form-results > :nth-child(4)').contains('Ubezpieczenie: Darmowe do 1000 zł');
-        cy.get('#form-results > :nth-child(4)').contains('Darmowe powiadomienia e-mail');
-        cy.get('#form-results > :nth-child(4)').contains('Możliwość nadania w dowolnym punkcie DPD Pickup lub w automacie DPD (wymagana aplikacja)');
-        cy.get('#form-results > :nth-child(4)').contains('Szacowany czas doręczenia');
+        cy.get('#form-results > :nth-child(4)')
+            .contains('List przewozowy: Drukuje i nakleja nadawca');
+        cy.get('#form-results > :nth-child(4)')
+            .contains('Ubezpieczenie: Darmowe do 1000 zł');
+        cy.get('#form-results > :nth-child(4)')
+            .contains('Darmowe powiadomienia e-mail');
+        cy.get('#form-results > :nth-child(4)')
+            .contains('Możliwość nadania w dowolnym punkcie DPD Pickup lub w automacie DPD (wymagana aplikacja)');
+        cy.get('#form-results > :nth-child(4)')
+            .contains('Szacowany czas doręczenia');
     });
 
     it('Check if letter in courier envelope has the same attributes', () => {
         cy.visit('/');
 
-        cy.letter(weight, lengthP, width, height, sendingCountry, pickupCountry);
+        cy.defineLetter(weight, lengthP, width, height, sendingCountry, pickupCountry);
         cy.get('.button').contains('Wyceń przesyłkę').click();
 
         cy.get('.order-4 > .button').eq(0).click();
-        cy.contains('Waga i wymiary').parent().contains(weight + ' kg ' + lengthP + ' cm x ' + width + ' cm x ' + height + ' cm');
+        cy.contains('Waga i wymiary').parent()
+            .contains(weight + ' kg ' + lengthP + ' cm x ' + width + ' cm x ' + height + ' cm');
     });
 });

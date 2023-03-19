@@ -42,7 +42,7 @@ Cypress.Commands.add('login', () => {
     cy.contains('Zaloguj się').click();
 })
 
-Cypress.Commands.add('package', (weight: string, length: string, width: string, height: string, insurance: string, sendingCountry: string, pickupCountry: string) => {
+Cypress.Commands.add('definePackage', (weight: string, length: string, width: string, height: string, insurance: string, sendingCountry: string, pickupCountry: string) => {
     cy.get('.col-span-4 > .grid > :nth-child(1) > .flex').click();
     cy.get('.input').eq(0).type(weight);
     cy.get('.input').eq(1).type(length);
@@ -53,7 +53,7 @@ Cypress.Commands.add('package', (weight: string, length: string, width: string, 
     cy.get('.input').eq(6).type(pickupCountry);
 })
 
-Cypress.Commands.add('letter', (weight: string, length: string, width: string, height: string, sendingCountry: string, pickupCountry: string) => {
+Cypress.Commands.add('defineLetter', (weight: string, length: string, width: string, height: string, sendingCountry: string, pickupCountry: string) => {
     cy.get('.col-span-4 > .grid > :nth-child(2) > .flex').click();
     cy.get('.input').eq(0).clear().type(weight);
     cy.get('.input').eq(1).clear().type(length);
