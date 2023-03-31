@@ -7,7 +7,7 @@
     "cy:docker": "docker run --rm -v %cd%:/e2e -w /e2e cypress/included:12.8.1 --browser firefox"
   },
   "devDependencies": {
-    "cypress": "^12.8.1",
-    "typescript": "^5.0.2"
+    "cypress": "^12.9.0",
+    "typescript": "^5.0.3"
   }
 }
